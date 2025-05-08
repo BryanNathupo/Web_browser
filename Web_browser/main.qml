@@ -27,6 +27,12 @@ ApplicationWindow {
                 Item {
                     Layout.preferredWidth: 600
                 }
+                Text{
+                    id: previous
+                    text: "<"
+                    font.pointSize: 30
+                    color: "blue"
+                }
 
                 TextField {
                     id: urlTextField
@@ -49,6 +55,12 @@ ApplicationWindow {
                          myWebView.url = urlTextField.text
                     }
 
+                }
+                Text{
+                    id: next
+                    text: ">"
+                    font.pointSize: 30
+                    color: "blue"
                 }
 
             }
