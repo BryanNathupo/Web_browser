@@ -45,7 +45,9 @@ ApplicationWindow {
                     background: Rectangle {
                         radius: 10
                     }
-
+                    onClicked: {
+                         myWebView.url = urlTextField.text
+                    }
 
                 }
 
@@ -60,8 +62,8 @@ ApplicationWindow {
                 WebEngineView{
                     id: myWebView
                     anchors.fill: parent
-                    //The static url for google
-                    url: "http://www.google.com"
+                    //Removing the static url
+                    url: " "
                 }
 
             }
