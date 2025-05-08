@@ -101,7 +101,7 @@ ApplicationWindow {
                 id: webViewRectangle
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                color: ""
+                color: "white"
 
                 WebEngineView{
                     id: myWebView
