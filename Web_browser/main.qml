@@ -27,15 +27,19 @@ ApplicationWindow {
                 Item {
                     Layout.preferredWidth: 600
                 }
-                Text{
-                    id: previous
-                    text: "<"
-                    font.pointSize: 30
-                    color: "blue"
-                    MouseArea{
-                        anchors.fill: parent
-                        onClicked: {
-                            webView.goBack()
+                Rectangle {
+                    id: previousRect
+                    Text{
+                        id: previus
+                        text: ">"
+                        font.pointSize: 30
+                        color: "blue"
+                        //Navigating between the pages
+                        MouseArea{
+                            anchors.fill: previousRect
+                            onClicked: {
+                                webView.goForward()
+                            }
                         }
                     }
                 }
@@ -62,19 +66,23 @@ ApplicationWindow {
                     }
 
                 }
-                Text{
-                    id: next
-                    text: ">"
-                    font.pointSize: 30
-                    color: "blue"
-                    //Navigating between the pages
-                    MouseArea{
-                        anchors.fill: parent
-                        onClicked: {
-                            webView.goForward()
+                Rectangle {
+                    id: nextRect
+                    Text{
+                        id: next
+                        text: ">"
+                        font.pointSize: 30
+                        color: "blue"
+                        //Navigating between the pages
+                        MouseArea{
+                            anchors.fill: nextRect
+                            onClicked: {
+                                webView.goForward()
+                            }
                         }
                     }
                 }
+
 
             }
 
