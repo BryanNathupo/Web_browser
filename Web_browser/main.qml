@@ -29,6 +29,8 @@ ApplicationWindow {
                 }
                 Rectangle {
                     id: previousRect
+                    color:"purple"
+                    width:  urlTextField.width
                     Text{
                         id: previus
                         text: ">"
