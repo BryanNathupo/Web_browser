@@ -39,15 +39,16 @@ ApplicationWindow {
                         font.pointSize: 30
                         color: "blue"
                         //Navigating between the pages
-                        MouseArea{
-                            id: backMousearea
-                            anchors.fill: previousRect
-                            hoverEnabled: true
-                            onClicked: {
-                                webView.goBack()
-                            }
 
+                    }
+                    MouseArea{
+                        id: backMousearea
+                        anchors.fill: previousRect
+                        hoverEnabled: true
+                        onClicked: {
+                            webView.goBack()
                         }
+
                     }
                 }
 
@@ -85,11 +86,12 @@ ApplicationWindow {
                         font.pointSize: 30
                         color: "blue"
                         //Navigating between the pages
-                        MouseArea{
-                            anchors.fill: nextRect
-                            onClicked: {
-                                webView.goForward()
-                            }
+
+                    }
+                    MouseArea{
+                        anchors.fill: nextRect
+                        onClicked: {
+                            webView.goForward()
                         }
                     }
                 }
