@@ -25,23 +25,28 @@ ApplicationWindow {
                 //anchors.centerIn: parent
 
                 Item {
-                    Layout.preferredWidth: 600
+                    Layout.preferredWidth: 280
                 }
                 Rectangle {
                     id: previousRect
-                    color:"purple"
-                    width:  urlTextField.width
+                    color: "grey"
+                    width: 50
+                    height: 40
                     Text{
+                        anchors.centerIn: parent
                         id: previus
-                        text: ">"
+                        text: "<"
                         font.pointSize: 30
                         color: "blue"
                         //Navigating between the pages
                         MouseArea{
+                            id: backMousearea
                             anchors.fill: previousRect
+                            hoverEnabled: true
                             onClicked: {
-                                webView.goForward()
+                                webView.goBack()
                             }
+
                         }
                     }
                 }
@@ -70,8 +75,12 @@ ApplicationWindow {
                 }
                 Rectangle {
                     id: nextRect
+                    color: "grey"
+                    width: 50
+                    height: 40
                     Text{
                         id: next
+                        anchors.centerIn: parent
                         text: ">"
                         font.pointSize: 30
                         color: "blue"
@@ -92,7 +101,7 @@ ApplicationWindow {
                 id: webViewRectangle
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                color: "red"
+                color: ""
 
                 WebEngineView{
                     id: myWebView
