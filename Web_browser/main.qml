@@ -46,7 +46,7 @@ ApplicationWindow {
                         anchors.fill: previousRect
                         hoverEnabled: true
                         onClicked: {
-                            webView.goBack()
+                            myWebView.goBack()
                             console.log("Im clicked")
                         }
 
@@ -92,7 +92,7 @@ ApplicationWindow {
                     MouseArea{
                         anchors.fill: nextRect
                         onClicked: {
-                            webView.goForward()
+                            myWebView.goForward()
                             console.log("Forward is Clicked!")
                         }
                     }
