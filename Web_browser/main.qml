@@ -32,6 +32,12 @@ ApplicationWindow {
                     text: "<"
                     font.pointSize: 30
                     color: "blue"
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked: {
+                            webView.goBack()
+                        }
+                    }
                 }
 
                 TextField {
@@ -61,6 +67,13 @@ ApplicationWindow {
                     text: ">"
                     font.pointSize: 30
                     color: "blue"
+                    //Navigating between the pages
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked: {
+                            webView.goForward()
+                        }
+                    }
                 }
 
             }
