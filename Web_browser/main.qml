@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-//import QtWebEngine 1.10
+import QtWebEngine 1.10
 
 ApplicationWindow {
     width: 640
@@ -46,8 +46,8 @@ ApplicationWindow {
                         anchors.fill: previousRect
                         hoverEnabled: true
                         onClicked: {
-                            //webView.goBack()
-                            console.log("Im clicked!")
+                            webView.goBack()
+                            console.log("Im clicked")
                         }
 
                     }
@@ -92,7 +92,7 @@ ApplicationWindow {
                     MouseArea{
                         anchors.fill: nextRect
                         onClicked: {
-                           // webView.goForward()
+                            webView.goForward()
                             console.log("Forward is Clicked!")
                         }
                     }
@@ -107,12 +107,12 @@ ApplicationWindow {
                 Layout.fillWidth: true
                 color: "white"
 
-                // WebEngineView{
-                //     id: myWebView
-                //     anchors.fill: parent
-                //     //Removing the static url
-                //     url: " "
-                // }
+                WebEngineView{
+                    id: myWebView
+                    anchors.fill: parent
+                    //Removing the static url
+                    url: " "
+                }
 
             }
 
