@@ -47,7 +47,7 @@ ApplicationWindow {
                         hoverEnabled: true
                         onClicked: {
                             myWebView.goBack()
-                            console.log("Im clicked")
+                            console.log("Go previous page" )
                         }
 
                     }
@@ -93,7 +93,7 @@ ApplicationWindow {
                         anchors.fill: nextRect
                         onClicked: {
                             myWebView.goForward()
-                            console.log("Forward is Clicked!")
+                            console.log("Go to next Page!")
                         }
                     }
                 }
